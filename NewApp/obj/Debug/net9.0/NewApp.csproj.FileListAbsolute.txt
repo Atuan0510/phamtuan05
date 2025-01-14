@@ -7,6 +7,7 @@ C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.GeneratedMSBuildEditorConfig.editorco
 C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.AssemblyInfoInputs.cache
 C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.AssemblyInfo.cs
 C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.csproj.CoreCompileInputs.cache
+C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.sourcelink.json
 C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.dll
 C:\Net_Core\NewApp\obj\Debug\net9.0\refint\NewApp.dll
 C:\Net_Core\NewApp\obj\Debug\net9.0\NewApp.pdb
