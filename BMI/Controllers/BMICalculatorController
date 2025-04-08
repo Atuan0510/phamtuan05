@@ -1,0 +1,23 @@
+using Microsoft.AspNetCore.Mvc;
+using YourNamespace.Models;
+
+public class BMICalculatorController : Controller
+{
+    [HttpGet]
+    public IActionResult CalculateBMI()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Calculate(BMICalculator model)
+    {
+        if (ModelState.IsValid)
+        {
+            double bmi = model.Weight / (model.Height * model.Height);
+            ViewBag.BMI = Math.Round(bmi, 2);
+            return View("CalculateBMI");
+        }
+        return View(model);
+    }
+}
