@@ -1,0 +1,22 @@
+using Microsoft.AspNetCore.Mvc;
+using InvoiceController.Models;
+public class InvoiceController : Controller
+{
+    [HttpGet]
+    public IActionResult CalculateInvoice()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Calculate(Invoice model)
+    {
+        if (ModelState.IsValid)
+        {
+            double totalAmount = model.Quantity * model.UnitPrice;
+            ViewBag.TotalAmount = Math.Round(totalAmount, 2);
+            return View("CalculateInvoice");
+        }
+        return View(model);
+    }
+}
