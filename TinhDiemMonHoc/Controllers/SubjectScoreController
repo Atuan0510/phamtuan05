@@ -1,0 +1,24 @@
+using Microsoft.AspNetCore.Mvc;
+using YourNamespace.Models;
+
+public class SubjectScoreController : Controller
+{
+    [HttpGet]
+    public IActionResult CalculateScore()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Calculate(SubjectScore model)
+    {
+        if (ModelState.IsValid)
+        {
+            // Giả sử trọng số cho A, B, C lần lượt là 0.4, 0.4, 0.2
+            double finalScore = (model.ScoreA * 0.4) + (model.ScoreB * 0.4) + (model.ScoreC * 0.2);
+            ViewBag.FinalScore = Math.Round(finalScore, 2);
+            return View("CalculateScore");
+        }
+        return View(model);
+    }
+}
